@@ -1,0 +1,161 @@
+@import './normalize.css';
+
+:root{
+    font-size: 16px;
+}
+
+*{
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.wrapper{
+ 
+    h1{
+        text-align: center;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .highlighter{
+            width: 20px;
+            height: 28px;
+            background: #28a94b;
+            animation: fader 1500ms infinite;
+        }
+
+        @keyframes fader {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+        .title{
+            font-weight: 800;
+            margin: .5rem;
+        }
+    }
+
+    .card{
+        background: white;
+        padding: 2.5rem 2rem;
+        box-shadow: 0 6px 16px 0 rgba(0,0,0,0.2);
+
+        button{
+            padding: .75rem 1rem;
+            margin: 0 .25rem;
+            background: white;
+            box-shadow: 0 6px 8px 0 rgba(0,0,0,0.2);
+            transition: all ease-in-out 250ms;
+            border: none;
+            cursor: pointer;
+            transform: scale(1);
+            font-weight: 500;
+            
+            &:hover{
+                transform: scale(0.95);
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+
+            &#open{
+                background: #28a94b;
+                color: white;
+            }
+
+            &#start{
+                background: hsla(202.42, 91.00%, 39.22%, 1);
+                color: white;
+            }
+
+            &#finish{
+                background: hsla(350.06, 71.54%, 50.39%, 1);
+                color: white;
+            }
+
+            &#restart{
+                background: #f6a416;
+            }
+
+        }
+
+        &#dj-panel, &#question-card, &#answers-card{
+            padding-top: 1.25rem;
+            .card-title{
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                font-weight: 600;
+            }
+        }
+
+        &#question-card{
+            .card-footer{
+                button{
+                    .icon{
+                        margin: 0 .25rem;
+                    }
+
+                    &#prev{
+                        background: #a5adb8;
+                        color: white;
+                    }
+                    &#next{
+                        background: #1ba94c;
+                        color: white;
+                    }
+                }
+            }
+
+            .card-content{
+                #question{
+                    font-size: 1rem;
+                    padding-bottom: .5rem;
+                }
+            }
+        }
+
+        &#answers-card{
+            .card-content{
+                
+                #answer-table{
+                    width: -webkit-fill-available;
+                    border-spacing: 1rem;
+                    border-collapse: separate;
+                    tr{
+                        margin: 1rem;
+
+                        td{
+                            padding: .75rem .75rem;
+                            text-align: left;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                            width: 40%;
+                            transform: scale(1);
+                            transition: ease-in-out 250ms;
+                            cursor: pointer;
+
+                            &:hover{
+                                transform: scale(0.95);
+                                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+        
+    }
+
+}

@@ -1,0 +1,442 @@
+@import url(/Users/ishan/hr/happy-hours/css/normalize.min.css);
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: #050c1b !important;
+  color: white;
+}
+
+.idc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.idc #idcLogo .hackerfeud {
+  text-align: center;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.idc #idcLogo .hackerfeud .highlighter {
+  width: 28px;
+  height: 46px;
+  background: #28a94b;
+  -webkit-animation: fader 1500ms infinite;
+          animation: fader 1500ms infinite;
+}
+
+@-webkit-keyframes fader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.idc #idcLogo .hackerfeud .title {
+  font-weight: 800;
+  margin: .5rem;
+  font-size: 4rem;
+}
+
+.idc #idcLogo p {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.idc #idcLogo p#counter {
+  display: none;
+}
+
+.wrong #incorrect {
+  z-index: 1000;
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 320px;
+}
+
+.idc .winner {
+  -webkit-animation: flash linear 1s infinite;
+  animation: flash linear 1s infinite;
+}
+
+.idc .winner {
+  display: none;
+  font-size: 65px;
+  color: #C81717;
+  text-shadow: 0 0 15px #fff, 0 0 20px #fff, 0 0 25px #fff, 0 0 30px #7d2a2a, 0 0 35px #7d2a2a, 0 0 50px #7d2a2a, 0 0 60px #7d2a2a, 0 0 100px #7d2a2a;
+}
+
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Pulse class and keyframe animation */
+.pulseit {
+  -webkit-animation: pulse linear .5s infinite;
+  animation: pulse linear .5s infinite;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 340px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    width: 200px;
+  }
+  50% {
+    width: 340px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+.gameBoard .cardHolder > div,
+.gameBoard .LBG {
+  border: 1px solid #9999;
+}
+
+.game__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.game__wrapper .hackerfeud {
+  text-align: center;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.game__wrapper .hackerfeud .highlighter {
+  width: 28px;
+  height: 34px;
+  background: #28a94b;
+  -webkit-animation: fader 1500ms infinite;
+          animation: fader 1500ms infinite;
+  padding-top: 3px;
+}
+
+@keyframes fader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.game__wrapper .hackerfeud .title {
+  font-weight: 800;
+  margin: .5rem;
+  font-size: 2.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.gameBoard {
+  position: relative;
+  color: white;
+  text-align: center;
+  border-radius: 1%;
+  margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
+  background: #262f38;
+  padding: 2.75rem 2rem;
+  -webkit-box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.gameBoard .score {
+  position: absolute;
+  text-align: center;
+  margin: auto;
+  font-size: 45px;
+  height: 50px;
+  line-height: 50px;
+  width: 75px;
+  padding: 20px;
+  border: 2px solid white;
+  -webkit-box-shadow: inset 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: inset 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+}
+
+.gameBoard .score#boardScore {
+  height: 75px;
+  line-height: 75px;
+  width: 125px;
+  font-size: 65px;
+  left: 0;
+  right: 0;
+  top: 20px;
+}
+
+.gameBoard .score#team1 {
+  left: 10px;
+  top: 0;
+  bottom: 0;
+}
+
+.gameBoard .score#team2 {
+  right: 10px;
+  top: 0;
+  bottom: 0;
+}
+
+.gameBoard .questionHolder {
+  width: 94%;
+  margin: auto;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-shadow: initial;
+  text-align: center;
+  padding: 10px;
+  background: #068932;
+  margin-bottom: 1.5rem;
+  -webkit-box-shadow: 0 1px 24px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 1px 24px 2px rgba(0, 0, 0, 0.4);
+  padding: 2.5rem .5rem;
+}
+
+.gameBoard .questionHolder span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.gameBoard .colHolder {
+  padding: 4px;
+}
+
+.gameBoard .colHolder > div {
+  display: block;
+  width: 100%;
+  -webkit-box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+}
+
+.gameBoard .cardHolder {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin: .5rem;
+  width: calc(100% - .75rem);
+  padding: 1.5rem 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.gameBoard .cardHolder:not(.empty) {
+  cursor: pointer;
+}
+
+.gameBoard .cardHolder b {
+  position: absolute;
+  right: 0;
+  width: 45px;
+  text-align: center;
+  border-left: 2px solid #003c7b;
+}
+
+.gameBoard .cardHolder span {
+  margin: 10px;
+}
+
+.gameBoard .cardHolder > div {
+  top: -2px;
+  left: -2px;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  width: 100%;
+  line-height: 50px;
+}
+
+.gameBoard .cardHolder .back {
+  background: -webkit-gradient(linear, left top, right top, from(#1f3d83), to(#097BBF));
+  background: linear-gradient(90deg, #1f3d83 0%, #097BBF 100%);
+}
+
+.gameBoard .cardHolder .back span {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+}
+
+.gameBoard .cardHolder .front {
+  text-align: center;
+}
+
+.gameBoard .cardHolder .front span {
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.gameBoard .btnHolder {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 45px;
+}
+
+.gameBoard .btnHolder .miss {
+  background-color: red;
+  visibility: hidden;
+  display: inline-block;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+}
+
+.gameBoard .btnHolder .button {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  margin: 10px;
+  height: 50px;
+  line-height: 50px;
+  width: 175px;
+  border: 3px solid white;
+  -webkit-box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 1px 24px 1px rgba(0, 0, 0, 0.48);
+}
+
+.gameBoard .btnHolder .button#awardTeam1 {
+  border-radius: 50px 0 0 50px;
+}
+
+.gameBoard .btnHolder .button#awardTeam2 {
+  border-radius: 0 50px 50px 0;
+}
+
+.diyak {
+  color: #7d2a2a;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  text-align: center;
+  -webkit-animation: flash linear 5s infinite;
+  animation: flash linear 5s infinite;
+}
+
+@media screen and (min-width: 780px) {
+  .gameBoard .colHolder > div {
+    display: inline-block;
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=game.css.map */

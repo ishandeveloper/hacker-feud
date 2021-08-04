@@ -1,0 +1,73 @@
+<html>
+<head>
+    <title>HackerFeud</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="panel/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="icon" type="image/png" href="https://hrcdn.net/community-frontend/assets/favicon-ddc852f75a.png">
+    <!-- <link href="panel/css/style.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="panel/js/panel.js"></script>
+</head>
+
+
+
+<body>
+  
+  <div class="wrapper">
+    <h1><div class="highlighter"></div><span class="title">HackerFeud</span> Controller</h1>
+    <div class="card">
+      <button id="open" onclick="open_game_window()">Open Game</button>
+      <button id="start" onclick="start_game()">Start Game</button>
+      <button id="finish" onclick="finish_game()">Finish Game</button>
+      <button id="restart" onclick="restart_game()">Restart Game</button>
+    </div>
+    <div id="dj-panel" class="card" >
+      <h3 class="card-title" >🎶 DJ Panel</h3>
+      <div class="card-content">
+        <button class="btn-music">Intro Music</button>
+      <button class="btn-music" onclick="play_sound('ff-strike.wav')">Wrong Answer</button>
+        <button class="btn-music">Correct Answer</button>
+      </div>
+    </div>
+    <div id="question-card" class="card">
+      <h3 class="card-title">Question <label class="icon"><i class="far fa-question-circle"></i></label> </h3>
+      <div class="card-content">
+        <p id="question">Mock Question</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn-nav" id="prev" onclick="prevQuestion()"><label class="icon"><i class="fas fa-arrow-circle-left"></i></label>Previous</button>
+        <button class="btn-nav" id="next" onclick="nextQuestion()" >Next<label class="icon"><i class="fas fa-arrow-circle-right"></i></label></button>
+      </div>    
+    </div>
+    <div id="answers-card" class="card">
+      <h3 class="card-title">Answers <label class="icon"><i class="fas fa-exclamation"></i></label></h3>
+      <div class="card-content">
+        <table id="answer-table">
+          <tbody id="answer-body">
+            <tr class="answer-row">
+              <td class="answer-cell">Answer 1</td>
+              <td class="answer-cell">Answer 2</td>
+            </tr>
+            <tr class="answer-row">
+              <td class="answer-cell">Answer 3</td>
+              <td class="answer-cell">Answer 4</td>
+            </tr>
+            <tr class="answer-row">
+              <td class="answer-cell">Answer 5</td>
+              <td class="answer-cell">Answer 6</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    </div>
+  </div>
+
+  
+</body>
+</html>
