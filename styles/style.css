@@ -1,4 +1,4 @@
-@import url(/Users/ishan/hr/happy-hours/styles/normalize.css);
+@import url(/Users/ishan/hr/hacker-feud/styles/normalize.css);
 :root {
   font-size: 16px;
 }
@@ -18,6 +18,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.wrapper {
+  max-width: 560px;
+  min-width: 560px;
 }
 
 .wrapper h1 {
