@@ -16,6 +16,8 @@ body{
 }
 
 .wrapper{
+    max-width: 560px;
+    min-width: 560px;
  
     h1{
         text-align: center;
@@ -24,12 +26,7 @@ body{
         align-items: center;
         justify-content: center;
 
-        .highlighter{
-            width: 20px;
-            height: 28px;
-            background: #28a94b;
-            animation: fader 1500ms infinite;
-        }
+        
 
         @keyframes fader {
             0%{
@@ -45,7 +42,19 @@ body{
 
         .title{
             font-weight: 800;
+            display: flex;
+            align-items: center;
             margin: .5rem;
+
+           
+        }
+
+        .highlighter{
+            margin-left: .5rem;
+            width: 20px;
+            height: 28px;
+            background: #28a94b;
+            animation: fader 1500ms infinite;
         }
     }
 

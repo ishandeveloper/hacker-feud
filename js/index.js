@@ -62,7 +62,7 @@ var app = {
     //console.clear()
     app.allData   = data
     app.questions = Object.keys(data)
-    app.shuffle(app.questions)
+    // app.shuffle(app.questions)
     app.makeQuestion(app.currentQ)
     $('body').append(app.board)
   },
@@ -204,7 +204,7 @@ var app = {
   },
   changeQuestion: function(currentround){		//roundpoints
 	CurrentRound = currentround;
-    app.currentQ = (app.currentQ + 1) % 3
+    app.currentQ = (app.currentQ + 1) % 29
     app.makeQuestion(app.currentQ)
 	window.opener.GetAnswers(qAnswr, app.currentQ, currentQ);	//roundpoints
   },
@@ -241,7 +241,7 @@ var app = {
 	}
 //app.init()
 window.onload  = function (e) {
-		window.opener.hideFirework();
+		// window.opener.hideFirework();
 };
 window.onbeforeunload = function (e) {
 		// notify control window

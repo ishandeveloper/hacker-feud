@@ -34,14 +34,6 @@ body {
           justify-content: center;
 }
 
-.wrapper h1 .highlighter {
-  width: 20px;
-  height: 28px;
-  background: #28a94b;
-  -webkit-animation: fader 1500ms infinite;
-          animation: fader 1500ms infinite;
-}
-
 @-webkit-keyframes fader {
   0% {
     opacity: 1;
@@ -68,7 +60,22 @@ body {
 
 .wrapper h1 .title {
   font-weight: 800;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: .5rem;
+}
+
+.wrapper h1 .highlighter {
+  margin-left: .5rem;
+  width: 20px;
+  height: 28px;
+  background: #28a94b;
+  -webkit-animation: fader 1500ms infinite;
+          animation: fader 1500ms infinite;
 }
 
 .wrapper .card {

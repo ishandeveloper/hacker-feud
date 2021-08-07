@@ -10,7 +10,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  background: #050c1b !important;
+  background: #05112c !important;
   color: white;
 }
 
@@ -23,6 +23,10 @@ body {
 }
 
 .idc #idcLogo .hackerfeud {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   text-align: center;
   font-weight: 600;
   display: -webkit-box;
@@ -184,6 +188,10 @@ body {
 }
 
 .game__wrapper .hackerfeud {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
   text-align: center;
   font-weight: 600;
   display: -webkit-box;

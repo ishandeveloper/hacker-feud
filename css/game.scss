@@ -11,7 +11,7 @@
 body {
     width: 100%;
     min-height: 100vh; 
-    background: hsla(220.91, 68.75%, 6.27%, 1) !important;
+    background: #05112c !important;
     color: white;
   }
   
@@ -23,6 +23,7 @@ body {
     
     #idcLogo{
         .hackerfeud{
+            flex-direction: row-reverse;
             text-align: center;
             font-weight: 600;
             display: flex;
@@ -145,6 +146,7 @@ body {
     flex-direction: column;
 
     .hackerfeud{
+      flex-direction: row-reverse;
         text-align: center;
         font-weight: 600;
         display: flex;

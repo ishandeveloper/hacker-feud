@@ -5,6 +5,10 @@ var missPointTeam1 = 0;
 var missPointTeam2 = 0;
 var CurrentRound = 1;
 
+	const toggle_answer = (idx) => {
+		game.document.querySelector(`#answer_${idx}`).click();
+	}
+
 	function start_game(){	
 		console.log('Starting...');
 		// play_sound('ff_open.mp3');
@@ -169,11 +173,17 @@ var CurrentRound = 1;
 		row2.classList.add('answer-row');
 		row3.classList.add('answer-row');
 		ans1.classList.add('answer-cell');
+		ans1.addEventListener('click', ()=> toggle_answer(0));
 		ans2.classList.add('answer-cell');
+		ans2.addEventListener('click', ()=> toggle_answer(1));
 		ans3.classList.add('answer-cell');
+		ans3.addEventListener('click', ()=> toggle_answer(2));
 		ans4.classList.add('answer-cell');
+		ans4.addEventListener('click', ()=> toggle_answer(3));
 		ans5.classList.add('answer-cell');
+		ans5.addEventListener('click', ()=> toggle_answer(4));
 		ans6.classList.add('answer-cell');
+		ans6.addEventListener('click', ()=> toggle_answer(5));
 		ans1.append(answers[0][0]);
 		ans2.append(answers[1][0]);
 		ans3.append(answers[2][0]);
@@ -189,6 +199,7 @@ var CurrentRound = 1;
 		table.appendChild(row1);
 		table.appendChild(row2);
 		table.appendChild(row3);
+		
 		// for (i = 0; i < answers.length; i+=2) { 
 		// }
 		// var row = table.insertRow(i+1);
