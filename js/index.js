@@ -204,7 +204,7 @@ var app = {
   },
   changeQuestion: function(currentround){		//roundpoints
 	CurrentRound = currentround;
-    app.currentQ = (app.currentQ + 1) % 29
+    app.currentQ = (app.currentQ + 1) % 30
     app.makeQuestion(app.currentQ)
 	window.opener.GetAnswers(qAnswr, app.currentQ, currentQ);	//roundpoints
   },
